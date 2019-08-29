@@ -19,8 +19,8 @@ public class HttpHelper implements Processor {
         return sInstance;
     }
 
-    public void init(Processor processor) {
-        this.mHttpProcessor = processor;
+    public static void init(Processor processor) {
+        sInstance.mHttpProcessor = processor;
     }
 
     @Override

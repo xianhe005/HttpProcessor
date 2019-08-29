@@ -17,8 +17,8 @@ public class AppContext extends Application {
     public void onCreate() {
         super.onCreate();
         // 网络请求实现类初始化
-        //HttpHelper.obtain().init(new OkHttpProcessor(this));
-        //HttpHelper.obtain().init(new VolleyProcessor(this));
-        HttpHelper.obtain().init(new XUtilsProcessor(this));
+        //HttpHelper.init(new OkHttpProcessor(this));
+        //HttpHelper.init(new VolleyProcessor(this));
+        HttpHelper.init(new XUtilsProcessor(this));
     }
 }
