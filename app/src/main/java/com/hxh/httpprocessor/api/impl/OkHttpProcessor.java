@@ -95,4 +95,12 @@ public class OkHttpProcessor implements Processor {
             }
         });
     }
+
+    private FormBody generateFormBody(Map<String, Object> map) {
+        FormBody.Builder builder = new FormBody.Builder();
+        for (String s : map.keySet()) {
+            builder.add(s, map.get(s).toString());
+        }
+        return builder.build();
+    }
 }
